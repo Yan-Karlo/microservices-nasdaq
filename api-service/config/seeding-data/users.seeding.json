@@ -1,0 +1,46 @@
+[{
+  "email": "admin@admin.com",
+  "password": "admin",
+  "role": "superadmin"
+},
+{
+  "email": "yan.karlo29@gmail.com",
+  "password": "da036e9e62f72b04af3de8a9404601ff705a62eb574a09b231a99f62ceb3cdd9",
+  "role": "superadmin"
+}, {
+  "email": "bpencott1@narod.ru",
+  "password": "4c9e9e70db644bb6f2a28586f05cb1110d8d26cd41fbb716a871c97fff15ca50",
+  "role": "admin"
+}, {
+  "email": "krush2@statcounter.com",
+  "password": "0303b3f7c8ef97f34c86f64abc65e5261ede2b99d63bcfb4d4db4de179e5f5da",
+  "role": "admin"
+}, {
+  "email": "kfernie3@elegantthemes.com",
+  "password": "8c0b31464290f14ec87d8820ea12004524341a2f93c0fb74ec472f2f06ab5e49",
+  "role": "user"
+}, {
+  "email": "cnickoll4@samsung.com",
+  "password": "6200caf003193b20a3be2c64be654c9c0705d20bc5e2f3bff7c44127a699776f",
+  "role": "user"
+}, {
+  "email": "jmutlow5@bluehost.com",
+  "password": "c7f485c871bc5773139f998b1069565012435daef8faf203cec295fc68fbe2bb",
+  "role": "user"
+}, {
+  "email": "lklaffs6@amazonaws.com",
+  "password": "553964b3ea5e499c9dc56484d2cc5b9c050645fb8653f47cd751b13347058bca",
+  "role": "user"
+}, {
+  "email": "fdettmar7@uiuc.edu",
+  "password": "2f7f784e049ac49e9afb40fa51c9bc164f2efbe12ad97c0e9eb9c9b41da4d066",
+  "role": "user"
+}, {
+  "email": "bbevir8@alexa.com",
+  "password": "933329e0f1c95351627efe7cb5f5e53f9c0e8fc4cf3bfd71011a88ac3697c2cf",
+  "role": "user"
+}, {
+  "email": "cmarris9@bing.com",
+  "password": "dd19f22f8d2ff7e305c0662a7dc0ce435e00ec015aab20c78cf72e02fa99868d",
+  "role": "user"
+}]

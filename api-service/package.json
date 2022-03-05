@@ -1,0 +1,22 @@
+{
+  "name": "api-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node api-serice",
+    "dev": "nodemon api-service"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "nodemailer": "^6.7.2",
+    "supertest": "^6.1.6",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

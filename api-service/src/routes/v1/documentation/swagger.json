@@ -1,0 +1,201 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-SERVICE",
+    "description": "A user-facing API that will receive requests from registered users asking for quote information.",
+    "version": "1.0.0"
+  },
+  "basePath": "/v1",
+
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+
+  "paths": {
+    "/seeding": {
+      "get": {
+        "description": "Seeding for Users and Histores",
+        "tags": ["SEEDING"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/users/history/{userId}": {
+      "get": {
+        "description": "A user can get their history of queries made to the api service by hitting the history endpoint",
+        "sumary": "Getting a user's history of queries made to the api service.",
+        "tags": ["USERS"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+
+    "/users/register": {
+      "post": {
+        "description": "To register a new user.",
+        "tags": ["USERS"],
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "email@email.com",
+                  "role": "admin"
+                }
+              }
+            }
+          }
+        },
+
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "400": {
+            "description": "Invalid user data."
+          }
+        }
+      }
+    },
+    "/users/signin": {
+      "post": {
+        "tags": ["USERS"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Access Denied"
+          }
+        }
+      }
+    },
+    "/users/reset-password/{email}": {
+      "put": {
+        "tags": ["USERS"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "email",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Email doen´t exist."
+          },
+          "500":{"description": "Unexpected error"}
+        }
+      }
+    },
+    "/stocks/stats": {
+      "get": {
+        "tags": ["STOCKS"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Access Denied."
+          },
+          "500":{
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "stocks/get-stock/{stockCode}": {
+      "post": {
+        "tags": ["STOCKS"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "stockCode",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Access Denied."
+          },
+          "500":{
+            "description": "Unexpected error"
+          }
+        }
+      }
+    }
+  }
+}
